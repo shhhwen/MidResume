@@ -1,9 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #1c1c1c;   
     font-family: Arial, Helvetica, sans-serif; 
 }
 
-/* --Navigation-- */
+/* Navigation */
 nav {
     font-family: Arial;
     text-align: center;
@@ -12,8 +18,8 @@ nav {
     z-index: 1000;
     position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 1000; 
+    left: 0;
+    width: 100vw;    
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -29,7 +35,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffffff;
+    color: #f1f1f1;
     transform: scale(1.04);
     border-bottom: 3px solid #f1f1f1;
 }
@@ -45,22 +51,24 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    padding: 0; 
+    margin: 0; 
 }
-
 
 /* About */
 .card {
-    display: flex;            /* 水平排列 */
-    justify-content: center;   /* 居中對齊 */
-    align-items: center;       /* 垂直對齊 */
-    gap: 120px;                 /* 左右區塊之間的間距 */
+    display: flex;            
+    flex-direction: row; 
+    justify-content: center;   
+    align-items: center;  
+    gap: 120px;           
     padding: 150px;
 }
 
 .aboutpic {
-    width: 300px;
+    width: 350px;
     text-align: center;
-    transition: 0.3s ease-in-out; 
+    transition: 0.3s ease-in-out;
     border: 5px solid #d4a4ff;
     margin-top: 50px;
     padding: 30px 40px;
@@ -71,41 +79,38 @@ nav ul {
 }
 
 .aboutpic:hover {
-    transform: scale(1.02); /* 僅在懸停時縮放 */
+    transform: scale(1.02); 
     filter: drop-shadow(1px 1px 20px #d4a4ff);
-
 }
 
 .abouttxt {
-    color: #ffffff;
-    width: 400px;
+    color: #f1f1f1;
+    max-width: 400px; 
     font-family: Arial;
-    display: flex;
-    flex-direction: column;
     line-height: 1.8;
+    text-align: left; 
 }
 
 .abouttxt ul {
-    padding-right: 50px;
+    padding-right: 0; 
     font-size: 20px;
 }
 
 .tittle {   
     color: #d4a4ff;
     font-size: 60px;
+    margin: 10px;
 }
-
 
 .abouttxt h3 {
     font-size: 30px;
-    transition: 0.3s ease-in-out; /* 移到一般樣式 */
+    transition: 0.3s ease-in-out; 
 }
 
 .abouttxt h3:hover {
     color: #d4a4ff;
-    transform: scale(1.02); /* 僅在懸停時縮放和變色 */
+    transform: scale(1.02); 
     filter: drop-shadow(1px 1px 20px #d4a4ff);
-
 }
 
 
@@ -162,8 +167,7 @@ nav ul {
     }
 }
 
-
-/* --Skills-- */
+/* Skills */
 .card01 {
     width: 80%;
     margin: 20px auto;
@@ -301,7 +305,7 @@ nav ul {
 
 /* Professional Bar */
 .professional-bar {
-    color: #F3F3F3;
+    color: #f1f1f1;
     font-size: 20px;
     font-family: Arial;
     margin-bottom: 80px;
@@ -420,19 +424,18 @@ nav ul {
     border-right-width: 0px;
 }
 
-
 /* Experience */
 main {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 50px;
-    padding: 180px 0px;
+    padding: 120px 0px;
     text-align: center;
 }
 
 .card02-wrapper {
-    max-width: 1024px; /* 與 .card 的 max-width 相同 */
-    margin: 0 auto; /* 將容器置中 */
+    max-width: 1024px; 
+    margin: 0 auto; 
 }
 
 .card02 {
@@ -456,12 +459,12 @@ main {
 }
 
 .card02 section:nth-child(even) {
-    flex-direction: row-reverse; /* 偶數 section 圖片置右，文字置左 */
+    flex-direction: row-reverse; 
 }
 
 .text-content {
     display: flex;
-    flex-direction: column; /* 讓 .ex-txt01 在 .ex-txt02 上方 */
+    flex-direction: column; 
     gap: 10px;
     max-width: 60%;
 }
@@ -515,26 +518,25 @@ main {
 }
 
 .illustration {
-    margin: 100px auto; /* 上下的 margin */
+    margin: 100px auto; 
     padding: 30px;
     max-width: 690px;
-    background-color: #373A40;
+    background-color: #2d2d2d;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* 使內容水平置中 */
+    text-align: center; 
 }
 
 .illustration-name {
     width: 100%;
-    color: #FFFFFF;
-    background-color: #373A40;
-    text-align: center; /* 標題置中 */
+    color: #f1f1f1;
+    text-align: center; 
 }
 
 .title04 {
-    color: #FFFFFF;
+    color: #f1f1f1;
     font-family: Arial;
     font-size: 25px;
     padding: 20px;
@@ -544,8 +546,8 @@ main {
     margin: 10px 0px;
     width: 60px;
     height: 35px;
-    color: #FFFFFF;
-    background-color: #373A40;
+    color: #f1f1f1;
+    background-color: #2d2d2d;
 }
 
 .illustration-link:hover {
@@ -567,24 +569,24 @@ main {
     display: inline-block;
     padding: 10px 15px;
     font-weight: bold;
-    background-color: #0040E0;
+    background-color: #2d2d2d;
     font-family: Arial;
-    color: #fff;
-    text-decoration: none; /* 移除預設連結下劃線 */
+    color: #f1f1f1;
+    text-decoration: none; 
     border-radius: 20px;
-    transition: background-color 0.3s; /* 平滑過渡效果 */
+    transition: background-color 0.3s; 
 }
 
 .button a:hover {
-    background-color: #003fe0c4;
+    background-color:#2d2d2d;
 }
 
 /* 圖片框 */
 .container {
     width: 600px;
-    margin: 0 auto; /* 水平居中 */
-    background-color: #FFFFFF; /* 設置大的框背景顏色為黑色 */
-    padding: 20px; /* 内邊距 */
+    margin: 0 auto; 
+    background-color: #f1f1f1; 
+    padding: 20px; 
     border-radius: 30px;
 }
 
@@ -599,10 +601,10 @@ main {
   
 .image-slider {
     position: relative;
-    width: 100%; /* 設置圖片框的寬度為容器的寬度 */
-    height: 700px; /* 設置圖片框的高度 */
+    width: 100%; 
+    height: 700px; 
     border-radius: 10px;
-    overflow: hidden; /* 隐藏溢出部分 */
+    overflow: hidden; 
 }
 
 .slides {
@@ -614,7 +616,7 @@ main {
     max-width: 100%;
     max-height: 100%;
     display: none;
-    object-fit: contain; /* 保持圖片比例 */
+    object-fit: contain;
 }
 
 .slide:first-child {
@@ -626,11 +628,11 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: transparent; /* 去除底色 */
-    color: #FFFFFF;
+    background-color: transparent;
+    color: #f1f1f1;
     border: none;
     cursor: pointer;
-    padding: 15px; /* 内邊距 */
+    padding: 15px;
     width: 40px; 
     height: 60px; 
     font-size: 30px;
@@ -647,7 +649,7 @@ right: 0;
 .prev:hover,
 .next:hover {
     transition: 0.3s ease-in-out;
-    color: #373A40;
+    color: #2d2d2d;
 }
 
 footer {

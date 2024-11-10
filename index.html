@@ -5,9 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shootingstar.css">
 
 </head>
 <body>
+
+<!--star-->
+<div class="background">
+    <div class="night">
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+    </div>
+</div>
+
+<div class="content">
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -19,7 +34,6 @@
             <li><a href="#illustration">Illustration</a></li>
         </ul>
     </nav>
-
     <!--About-->
     <article class="card" id="about">
         <section class="aboutpic">
@@ -47,10 +61,10 @@
             <h3>Stars can’t shine without darkness.</h3>
         </section>
     </article>
-
-<!-- Skills -->
-<article >
-    <div class="card01">
+    
+    <!-- Skills -->
+    <article >
+    <div class="card01" id="skills">
         <h1 class="title">My Skills</h1>
         <div class="skills-container">
             <!-- Programming Skills Section -->
@@ -77,9 +91,7 @@
                     </div>
                 </div>
             </section>
-
             <div class="v_line"></div>
-
             <section class="professional">
                 <h1  class="title01">Professional</h1>
                 <div class="professional-bar">
@@ -109,10 +121,10 @@
             </section>
         </div>
     </div>
-</article>
-
-<!--Experience-->
-<main>
+    </article>
+    
+    <!--Experience-->
+    <main>
     <h1 id="experience" class="tittle">Experience</h1>
     <div class="card02-wrapper">
         <article  class="card02">
@@ -130,13 +142,13 @@
                 <div class="text-content">
                     <h2 class="ex-txt01">SDGs英文簡報-決賽入圍</h2>
                     <p class="ex-txt02">
-                        此競賽內容呈現與發表皆須全程使用英文,主題自訂且需針對一項 SDGs指標項目進行報導與深入探討。很高興可以代表班上參賽，雖然我的英文能力不是非常好，但透過努力練習後，有幸進入了決賽，也讓我見識到許多台風穩健且英文表達能力優秀的參賽者們。
+                        在這次SDGs英文簡報比賽中，需自選主題深入探討了一項SDG指標，並全程以英文進行報告和展示。作為班級代表參賽，雖然一開始因英文表達能力的不足而感到壓力，但在比賽準備過程中，我透過持續練習，逐漸提升了自己在英語表達和演講上的信心。
+                        決賽入圍後，見識到其他參賽者們穩健的台風和流利的英文表達，讓我深受啟發，並體會到語言和表達能力在溝通中的重要性。這次經驗不僅讓我增進了英文能力，也強化了我在公開場合自信發表的技巧。                    
                     </p>
                 </div>
             </section>
         </article>
     </div>
-
     <div class="card02-wrapper">
         <article class="card02">
             <section>
@@ -145,22 +157,23 @@
                     <h2 class="ex-txt01">企業資料通訊-期末專題</h2>
                     <p class="ex-txt02">
                         此專案要我們進行網路布置，使用「Cisco Packet Tracer」為一樓、二樓和三樓配置網路設備及與其相應的網段。每層樓需擁有獨立的網段，並且各層樓之間通過專線進行互聯。
+                        讓我學習到如何規劃網路拓撲，並了解到不同網段間的連接方式和路由配置對網路效能的影響。實踐過程中，對IP地址規劃和網路分段的應用有了更深的理解，也提高了我在企業網路架構上的實務能力。這次專題不僅鞏固了我在資料通訊領域的基礎知識，更讓我體驗了網路管理和設計的複雜性和挑戰。                    
                     </p>
                 </div>
             </section>
-        
+    
             <section>
                 <div class="expic"><img src="image/experience/MM.png" alt="project-experiene" style="height: 280px;"/></div>
                 <div class="text-content">
                     <h2 class="ex-txt01">管理數學期末專題</h2>
                     <p class="ex-txt02">
-                        本專案自選一主題，利用自身所學結合線性代數解決自選主題之問題。我選擇的主題是學習效益，通過建立線性規劃模型，利用Excel工具進行求解，達到在平衡學習、休息和娛樂時間的前提下，最大化學習效率的目標。
+                        本專案自選一主題，利用自身所學結合線性代數解決自選主題之問題。我選擇的主題是「學習效益」，通過建立線性規劃模型，利用Excel工具進行求解，達到在平衡學習、休息和娛樂時間的前提下，最大化學習效率的目標。
+                        在實作過程中，我利用Excel進行建模與求解，設定了學習、休息、娛樂的時間限制及優化目標。模型的設立讓我清晰地看到時間分配的影響，並且從數學角度分析出最佳的學習計劃。這次專題挑戰了我運用理論解決實際問題的能力，同時透過多次調整模型參數，也讓我學會如何在求解中應用迭代思維。                    
                     </p>
                 </div>
             </section>
         </article>
     </div>
-
     <div class="card02-wrapper">
         <article  class="card02">
             <section>
@@ -168,7 +181,9 @@
                 <div class="text-content">
                     <h2 class="ex-txt01">管理學-志工服務</h2>
                     <p class="ex-txt02">
-                        這個活動我們從撰寫報告、尋找志工活動開始，完整規劃整個流程、參加志工活動、製作簡報、剪輯影片，到最後評估活動成果，我認為這是一段非常有意義的經驗。
+                        在這次活動我們從一開始的計劃到結束，每個環節都需要詳細的規劃和協作。過程中，我們分工合作，先撰寫報告來了解志工服務的意義與目標，再積極尋找適合的志工機會，並訂定活動的詳細計劃。
+                        在參與志工活動時，我們體驗了如何將管理學中的組織和協調理論實際應用到活動中，並學習如何面對突發狀況、靈活應對。
+                        我認為這次志工服務不僅讓我掌握了管理學的實踐方法，也增進了我的協作與領導能力，是一段非常充實且具意義的經驗。                    
                     </p>
                 </div>
             </section>
@@ -177,16 +192,17 @@
                 <div class="text-content">
                     <h2 class="ex-txt01">語文與修辭-讀書會</h2>
                     <p class="ex-txt02">
-                        我們讀書會的主題為「心理學」，透過閱讀並與組員一同分享觀後感想，讓我對人的心理有更深的了解，且獲得了更多不同的見解，是個別具意義的有趣活動。
+                        當我們的讀書會以「心理學」為主題時，每位成員都選擇了自己感興趣的書籍進行閱讀，並在討論時分享心得。我們不僅討論書中的知識與理論，還結合了自身經驗，探討這些心理學概念在日常生活中的應用。這樣的交流讓我對心理學理論有了更實際的理解，也發現每個人對相同內容的解讀可以截然不同。
+                        透過這次讀書會，我學會了如何用不同角度來分析人們的行為和心理，並加深了對他人內心世界的理解。                    
                     </p>
                 </div>
             </section>
         </article>
     </div>
-</main>
-
-<!--Illustration-->
-<article class="card03" id="illustration">
+    </main>
+    
+    <!--Illustration-->
+    <article class="card03" id="illustration">
     <section class="illustration">
         <div class="illustration-name">
             <div class="tittle">
@@ -208,26 +224,22 @@
             </div>
         </div>
     </section>
-</article>
-
+    </article>
     
-<footer>
+    <footer>
     <p>2024 © Copyright ShihWen, Wu</p>
-</footer>
+    </footer>
     
-<script>
+    <script>
     //圖片框翻頁
     let slideIndex = 0;
     showSlide(slideIndex);
-
     function prevSlide(parentElement) {
         showSlide(slideIndex -= 1, parentElement);
     }
-
     function nextSlide(parentElement) {
         showSlide(slideIndex += 1, parentElement);
     }
-
     function showSlide(n, parentElement) {
         const slides = parentElement.querySelectorAll(".slide");
         if (n >= slides.length) {
@@ -241,7 +253,8 @@
         }
         slides[slideIndex].style.display = "block";
     }
-</script>    
+    </script>
+</div>
 
 </body>
 </html>
