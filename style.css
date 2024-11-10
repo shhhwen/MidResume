@@ -1,0 +1,661 @@
+body {
+    background-color: #1c1c1c;   
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+/* --Navigation-- */
+nav {
+    font-family: Arial;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #2d2d2d;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav a {
+    padding: 12px 10px;
+    margin: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #d4a4ff;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #ffffff;
+    transform: scale(1.04);
+    border-bottom: 3px solid #f1f1f1;
+}
+
+.vertical-line {  
+    display: inline-block;
+    border-left: 1px solid #d4a4ff;
+    margin: 20px 10px;
+    height: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* About */
+.card {
+    display: flex;            /* 水平排列 */
+    justify-content: center;   /* 居中對齊 */
+    align-items: center;       /* 垂直對齊 */
+    gap: 120px;                 /* 左右區塊之間的間距 */
+    padding: 150px;
+}
+
+.aboutpic {
+    width: 300px;
+    text-align: center;
+    transition: 0.3s ease-in-out; 
+    border: 5px solid #d4a4ff;
+    margin-top: 50px;
+    padding: 30px 40px;
+}
+
+.aboutpic img {
+    border-radius: 50%;
+}
+
+.aboutpic:hover {
+    transform: scale(1.02); /* 僅在懸停時縮放 */
+    filter: drop-shadow(1px 1px 20px #d4a4ff);
+
+}
+
+.abouttxt {
+    color: #ffffff;
+    width: 400px;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+}
+
+.abouttxt ul {
+    padding-right: 50px;
+    font-size: 20px;
+}
+
+.tittle {   
+    color: #d4a4ff;
+    font-size: 60px;
+}
+
+
+.abouttxt h3 {
+    font-size: 30px;
+    transition: 0.3s ease-in-out; /* 移到一般樣式 */
+}
+
+.abouttxt h3:hover {
+    color: #d4a4ff;
+    transform: scale(1.02); /* 僅在懸停時縮放和變色 */
+    filter: drop-shadow(1px 1px 20px #d4a4ff);
+
+}
+
+
+/* Icon */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 20px;
+}
+
+.icon {
+    --color: #d4a4ff;
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+}
+
+.icon:hover > i {
+    scale: 1.2;
+    color: #f1f1f1;
+}
+
+.icon:before {
+    background: var(--color);
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -110%;
+    top: 80%;
+    transform: rotate(45deg);
+}
+
+.icon:hover:before {
+    animation: slide 0.7s forwards;
+}
+
+@keyframes slide {
+    50% {
+        left: 10%;
+        top: -40%;
+    }
+    100% {
+        left: -15%;
+        top: -15%;
+    }
+}
+
+
+/* --Skills-- */
+.card01 {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2d2d2d;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.title {
+    color: #d4a4ff;
+    font-family: Arial;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* Skills Container for side-by-side layout */
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+/* Programming and Professional Sections */
+.programming, .professional {
+    padding: 20px;
+    width: 45%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.programming:hover, .professional:hover {
+    transform: scale(1.02);
+}
+
+.title01 {
+    color: #f1f1f1;
+    font-family: Arial;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Programming Bar */
+.programming-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+@property --percentage {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+  }
+  
+@keyframes circleAni {
+    from {
+        --percentage: 0;
+    }
+}
+
+.circle {
+    width: 110px;
+    aspect-ratio: 1;
+    display: inline-grid;
+    place-content: center;
+    margin: 40px 10px;
+    position: relative;
+    --color: #d4a4ff;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+    transition: 0.3s ease-in-out;
+
+}
+
+.circle:hover {
+    animation-name: circleAni1;
+    animation-play-state: running; 
+    transform: scale(1.15);
+}
+
+@keyframes circleAni1 {
+    from {
+        --percentage: 0;
+    }
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    background: conic-gradient(var(--color) calc(var(--percentage) * 1%), #0000 0%, var(--color));
+}
+
+.circle::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #2d2d2d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle .label {
+    color: #f1f1f1;
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.circle.ani {
+    animation-name: pieAni;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+/*分隔線*/
+.v_line{
+    border-right: thick solid #d4a4ff;
+    height:450px;
+    left: 100%;
+    margin-top: 60px;
+}
+
+/* Professional Bar */
+.professional-bar {
+    color: #F3F3F3;
+    font-size: 20px;
+    font-family: Arial;
+    margin-bottom: 80px;
+
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        margin: 10px 10px;
+        width: 0px;
+        border-right-style: solid;
+        border-right-color: #d4a4ff;
+        border-radius: 20px;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.pro-front {
+    animation: bar1 2s ease-out;
+    border-right-width: 336px;
+}
+
+.pro-back {
+    animation: bar2 2s ease-out;
+    border-right-width: 364px;
+}
+
+.pro-database {
+    animation: bar3 2s ease-out;
+    border-right-width: 336px;
+}
+
+.pro-ppt {
+    animation: bar4 2s ease-out;
+    border-right-width: 476px;
+}
+
+.pro-illustrate {
+    animation: bar5 2s ease-out;
+    border-right-width: 392px;
+}
+
+@keyframes bar {
+    from {
+        border-right-width: 0px;
+    }
+    to {
+        border-right-width: 0px;
+    }
+}
+
+@keyframes bar1 {
+    from {
+        border-right-width: 0px;
+    }
+    to {
+        border-right-width: 336px;
+    }
+}
+
+@keyframes bar2 {
+    from {
+        border-right-width: 0px;
+    }
+    to {
+        border-right-width: 364px;
+    }
+}
+
+@keyframes bar3 {
+    from {
+        border-right-width: 0px;
+    }
+    to {
+        border-right-width: 336px;
+    }
+}
+
+@keyframes bar4 {
+    from {
+        border-right-width: 0px;
+    }
+    to {
+        border-right-width: 476px;
+    }
+}
+
+@keyframes bar5 {
+    from {
+        border-right-width: 0px;
+    }
+    to {
+        border-right-width: 392px;
+    }
+}
+
+.pro-txt {
+    font-size: 20px;
+    transform: translate(7px,-32px); 
+}
+
+.bar {
+    width: 560px; 
+    height: 30px; 
+    border-radius: 20px;
+    background-color: #f1f1f1; 
+    transform: translate(6px,36.5px);
+    position: relative;
+    z-index: 1;
+}
+
+.professional-bar li:hover {
+    animation: bar 0.1s ease-out;
+    border-right-width: 0px;
+}
+
+
+/* Experience */
+main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    padding: 180px 0px;
+    text-align: center;
+}
+
+.card02-wrapper {
+    max-width: 1024px; /* 與 .card 的 max-width 相同 */
+    margin: 0 auto; /* 將容器置中 */
+}
+
+.card02 {
+    background-color: #2d2d2d;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; 
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.card02 section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: left;
+    margin: 30px auto;
+}
+
+.card02 section:nth-child(even) {
+    flex-direction: row-reverse; /* 偶數 section 圖片置右，文字置左 */
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column; /* 讓 .ex-txt01 在 .ex-txt02 上方 */
+    gap: 10px;
+    max-width: 60%;
+}
+
+.ex-txt01 {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 24px;
+    color: #f1f1f1;
+    text-align: center;
+    margin: 0;
+}
+
+.ex-txt02 {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #f1f1f1;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.expic img {
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.expic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.expic:hover img {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05); 
+}
+
+/* Illustration */
+.card03 {
+    scroll-margin-top: 88px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.illustration {
+    margin: 100px auto; /* 上下的 margin */
+    padding: 30px;
+    max-width: 690px;
+    background-color: #373A40;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* 使內容水平置中 */
+}
+
+.illustration-name {
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #373A40;
+    text-align: center; /* 標題置中 */
+}
+
+.title04 {
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.illustration-link {
+    margin: 10px 0px;
+    width: 60px;
+    height: 35px;
+    color: #FFFFFF;
+    background-color: #373A40;
+}
+
+.illustration-link:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.08); 
+}
+
+.illustration-link:not(:hover) {
+    transition: 0.3s ease-in-out; 
+}
+
+
+.title05 {
+    font-size: 25px;
+}
+
+
+.button a {  
+    display: inline-block;
+    padding: 10px 15px;
+    font-weight: bold;
+    background-color: #0040E0;
+    font-family: Arial;
+    color: #fff;
+    text-decoration: none; /* 移除預設連結下劃線 */
+    border-radius: 20px;
+    transition: background-color 0.3s; /* 平滑過渡效果 */
+}
+
+.button a:hover {
+    background-color: #003fe0c4;
+}
+
+/* 圖片框 */
+.container {
+    width: 600px;
+    margin: 0 auto; /* 水平居中 */
+    background-color: #FFFFFF; /* 設置大的框背景顏色為黑色 */
+    padding: 20px; /* 内邊距 */
+    border-radius: 30px;
+}
+
+.container:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.02);
+}
+
+.container:not(:hover) {
+    transition: 0.5s ease-in-out;
+}
+  
+.image-slider {
+    position: relative;
+    width: 100%; /* 設置圖片框的寬度為容器的寬度 */
+    height: 700px; /* 設置圖片框的高度 */
+    border-radius: 10px;
+    overflow: hidden; /* 隐藏溢出部分 */
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+    object-fit: contain; /* 保持圖片比例 */
+}
+
+.slide:first-child {
+    display: block;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* 去除底色 */
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    padding: 15px; /* 内邊距 */
+    width: 40px; 
+    height: 60px; 
+    font-size: 30px;
+}
+
+.prev {
+left: 0;
+}
+
+.next {
+right: 0;
+}
+  
+.prev:hover,
+.next:hover {
+    transition: 0.3s ease-in-out;
+    color: #373A40;
+}
+
+footer {
+    background-color: #2d2d2d;
+    color: #d4a4ff;
+    font-family: Arial;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    width: 100%;
+}
